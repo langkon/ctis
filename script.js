@@ -1,4 +1,6 @@
-events = [{
+'use strict';
+
+var events = [{
   name: "Искра",
   id:235
 },
