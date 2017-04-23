@@ -1,20 +1,12 @@
 'use strict';
 
-var events = [{
-  name: "Искра",
-  id:235
-},
-{
-  name: "Король говорит",
-  id:229
-},
-{
-  name: "Красное на черном",
-  id:212
-}];
+jQuery.get('events.json', show_events);
 
-for (var i = 0; i < events.length; i++) {
-  show(events[i]);
+function show_events(response) {
+  var events = JSON.parse(response.data);
+  for (var i = 0; i < events.length; i++) {
+    show(events[i]);
+  }
 }
 
 function show(game) {
