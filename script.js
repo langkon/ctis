@@ -1,6 +1,6 @@
 'use strict';
 
-jQuery.get('events.json', show_events);
+jQuery.get('events/all.json', show_events);
 
 function show_events(response) {
   var events = JSON.parse(response.data);
